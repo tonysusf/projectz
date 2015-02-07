@@ -22,14 +22,17 @@ body .navbar {
       color: #fff;
       text-decoration: none;
     }
+    @media (max-width: 768px) {
+      margin-top: 10px;
+      margin-left: 24px;
+    }
   }
 }
 
-.form-group {
-    margin-left: auto;
-    margin-right: auto;
+body .form-group {
     background-color: #fff;
     height: 700px;
+    margin-bottom: 0;
     -webkit-box-shadow: 2px 0 5px -2px #888;
             box-shadow: 2px 0 5px -2px #888;
     h3 {
@@ -51,10 +54,18 @@ body .navbar {
         background-color: #74c005;
       }
     }
+    @media (max-width: 768px) {
+      height: 300px;
+    }
 }
+
 .results {
-  h3 , .media-heading {
+  h3 {
     font-weight: 300;
+  }
+  .media-heading {
+    font-weight: 400;
+    text-decoration: underline;
   }
   .result-total {
     h4, p { display: inline; }
