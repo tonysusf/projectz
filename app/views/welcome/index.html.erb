@@ -1,40 +1,27 @@
 <div class="form-group col-xs-12 col-sm-6">
   <h3>Fill Out Your Information</h3>
-  <% @questions.each_with_index do |question, index| %>
-    <label for="sel1"><%= question.text %>:</label>
-    <select class="form-control">
-      <% question.question_options.each do |option| %>
-        <option><%= option.text %></option>
-      <% end %>
-    </select>
-  <% end%>
+  <form id="search-form">
+    <% @questions.each_with_index do |question, index| %>
+      <label for="sel1"><%= question.text %>:</label>
+      <select class="form-control">
+        <option default>--Select--</option>
+        <% question.question_options.each do |option| %>
+          <option><%= option.text %></option>
+        <% end %>
+      </select>
+    <% end%>
 
-  <button type="button" class="btn btn-success">Search</button>
-
+    <button type="button" class="search btn btn-success">Search</button>
+  </form>
 </div>
 <div class="results col-xs-12 col-sm-6">
   <h3>Grants Available To You</h3>
-  <div class="media">
-    <div class="media-left">
-    </div>
-    <div class="media-body">
-      <h5 class="media-heading">Down Payment Assitance Grant</h5>
-      ...
-    </div>
-  </div>
-  <div class="media">
-    <div class="media-left">
-    </div>
-    <div class="media-body">
-      <h5 class="media-heading">Low Income Grant</h5>
-      ...
-    </div>
-  </div>
-  <div class="result-total">
-    <h4>Total Savings:</h4>
-    <p>$50,000</p>
-  </div>
+
 </div>
-<div class="map-container col-xs-12 col-sm-6">
+<div class="result-total">
+  <h4>Total Savings:</h4>
+  <p>$50,000</p>
+</div>
+<div class="map-container col-xs-12">
 
 </div>

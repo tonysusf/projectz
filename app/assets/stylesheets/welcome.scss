@@ -55,12 +55,14 @@ body .form-group {
       }
     }
     @media (max-width: 768px) {
-      height: 300px;
+      height: 600px;
     }
 }
 
 .results {
-  height: 400px;
+  height: 650px;
+  overflow: hidden;
+  overflow-y: scroll;
   h3 {
     font-weight: 300;
   }
@@ -68,12 +70,13 @@ body .form-group {
     font-weight: 400;
     text-decoration: underline;
   }
-  .result-total {
-    h4, p { display: inline; }
-  }
+}
+
+.result-total {
+  h4, p { display: inline; }
 }
 
 .map-container {
   background-color: #fff;
-  height: 300px;
+  height: 400px;
 }
