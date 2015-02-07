@@ -25,25 +25,38 @@ body .navbar {
   }
 }
 
-.intro {
-  text-align: center;
-  h1 {
-    font-weight: 300;
-  }
-}
-
 .form-group {
     margin-left: auto;
     margin-right: auto;
+    background-color: #fff;
+    height: 700px;
+    -webkit-box-shadow: 2px 0 5px -2px #888;
+            box-shadow: 2px 0 5px -2px #888;
     h3 {
       font-weight: 300;
     }
     label {
       font-weight: 300;
     }
+    .btn-success {
+      margin: 10px 10px 10px 0;
+      background-color: #fff;
+      color: #74c005;
+      border: 1px solid #74c005;
+      -webkit-transition: all 0.2s, -webkit-transform 2s;
+      transition: all 0.2s, transform 2s;
+      &:hover {
+        color: #fff;
+        border: 1px solid #74c005;
+        background-color: #74c005;
+      }
+    }
 }
 .results {
   h3 , .media-heading {
     font-weight: 300;
+  }
+  .result-total {
+    h4, p { display: inline; }
   }
 }
