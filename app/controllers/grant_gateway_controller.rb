@@ -10,6 +10,15 @@ class GrantGatewayController < ApplicationController
     end
   end
   
+  
+  def search
+    response = get_fake_grants
+    
+    respond_to do | format |
+      format.json { render :text => response.to_json }
+    end
+  end
+  
   private
   def get_fake_questions
     data = []
@@ -35,6 +44,21 @@ class GrantGatewayController < ApplicationController
     
     data << opt1
     data << opt2
+    data
+  end
+  
+  def get_fake_grants
+    data = []
+    obj = Grant.new
+    obj.id = 1
+    obj.name = 'Dream Maker Grant'
+    data << obj
+    
+    obj = Grant.new
+    obj.id = 2
+    obj.name = 'Good Neighbor Next Door'
+    data << obj
+    
     data
   end
 end

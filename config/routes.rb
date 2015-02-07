@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   get 'grant_gateway/data'
+  
+  get 'grant_gateway/search'
 
   get 'welcome/index'
 
