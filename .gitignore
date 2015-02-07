@@ -1,1 +1,6 @@
 .DS_Store
+tmp/
+.sass-cache/
+public/assets
+vendor/cache
+log/*.log
