@@ -3,7 +3,7 @@ class GrantGatewayController < ApplicationController
   
   def data
 
-    response = [get_fake_questions, get_fake_options]
+    response = [Question.all, QuestionOption.all]
     
     respond_to do | format |
       format.json { render :text => response.to_json }
@@ -12,7 +12,7 @@ class GrantGatewayController < ApplicationController
   
   
   def search
-    response = get_fake_grants
+    response = Grant.all
     
     respond_to do | format |
       format.json { render :text => response.to_json }
