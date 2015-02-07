@@ -4,24 +4,46 @@
 
 html body {
   background-color: #f6f6f6;
+  padding-top: 50px;
+  font-family: Roboto;
 }
 
-.navbar {
+body .navbar {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 10;
-  background-color: #fff;
-  .title a {
-    color: black;
+  background-color: rgba(0,116,228,0.97);
+  border-radius: 0;
+  .title h4 {
+    margin-top: 14px;
+    margin-left: 14px;
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
   }
 }
 
 .intro {
   text-align: center;
+  h1 {
+    font-weight: 300;
+  }
 }
 
 .form-group {
     margin-left: auto;
     margin-right: auto;
+    h3 {
+      font-weight: 300;
+    }
+    label {
+      font-weight: 300;
+    }
+}
+.results {
+  h3 , .media-heading {
+    font-weight: 300;
+  }
 }
