@@ -1,18 +1,16 @@
 <div class="form-group col-xs-12 col-sm-6">
   <h3>Fill Out Your Information</h3>
-  <label for="sel1">Location:</label>
-  <select class="form-control" id="sel1">
-    <option></option>
-    <option>Seattle</option>
-    <option>Spokane</option>
-  </select>
-  <label for="sel2">Age:</label>
-  <select class="form-control" id="sel2">
-    <option>Under 25</option>
-    <option>26 to 59</option>
-    <option>60 +</option>
-  </select>
+  <% @questions.each_with_index do |question, index| %>
+    <label for="sel1"><%= question.text %>:</label>
+    <select class="form-control">
+      <% question.question_options.each do |option| %>
+        <option><%= option.text %></option>
+      <% end %>
+    </select>
+  <% end%>
+
   <button type="button" class="btn btn-success">Search</button>
+
 </div>
 <div class="results col-xs-12 col-sm-6">
   <h3>Grants Available To You</h3>
