@@ -60,6 +60,7 @@ body .form-group {
 }
 
 .results {
+  height: 400px;
   h3 {
     font-weight: 300;
   }
@@ -70,4 +71,9 @@ body .form-group {
   .result-total {
     h4, p { display: inline; }
   }
+}
+
+.map-container {
+  background-color: #fff;
+  height: 300px;
 }
