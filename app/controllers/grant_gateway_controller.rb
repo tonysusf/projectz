@@ -18,7 +18,8 @@ class GrantGatewayController < ApplicationController
       end
     end
 
-    response = GrantProcessor.filter(hash)
+    grant_processor = GrantProcessor.new(hash)
+    response = grant_processor.filter
     respond_to do | format |
       format.json { render :text => response.to_json }
     end
