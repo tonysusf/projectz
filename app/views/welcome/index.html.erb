@@ -3,13 +3,17 @@
   <form id="search-form">
     <% @questions.each_with_index do |question, index| %>
       <label for="sel1"><%= question.text %>:</label>
-      <select class="form-control">
-        <option default>--Select--</option>
-        <% question.question_options.each do |option| %>
-          <option><%= option.text %></option>
-        <% end %>
-      </select>
-    <% end%>
+      <% if question.input_type > 0 %>
+        <input class="form-control"></input>
+      <% else %>
+        <select class="form-control">
+          <option default>--Select--</option>
+          <% question.question_options.each do |option| %>
+            <option><%= option.text %></option>
+          <% end %>
+        </select>
+      <% end %>
+    <% end %>
 
     <button type="button" class="search btn btn-success">Search</button>
   </form>
