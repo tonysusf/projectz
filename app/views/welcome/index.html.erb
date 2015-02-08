@@ -8,7 +8,7 @@
       <% else %>
         <div class="dropdown-wrapper">
           <select name="question-<%= question.id %>">
-            <option default>--Select--</option>
+            <option value="">-- Select --</option>
             <% question.question_options.each do |option| %>
               <option value="<%= option.id %>"><%= option.text %></option>
             <% end %>
