@@ -121,8 +121,28 @@ body .form-container{
   overflow: hidden;
   overflow-y: scroll;
   .media-heading {
-    font-weight: 400;
+    font-weight: 300;
     text-decoration: underline;
+    display: inline;
+    cursor: pointer;
+  }
+  i {
+    margin-left: 5px;
+    cursor: pointer;
+  }
+  p {
+    font-weight: 300;
+  }
+  .media {
+    padding: 5px 10px 5px 10px;
+    cursor: pointer;
+    &:hover {
+      background-color: #fff;
+    }
+  }
+  .media-links {
+    color: black;
+    text-decoration: none;
   }
 }
 
@@ -136,5 +156,6 @@ body .form-container{
 
 .result-total {
   margin-top: 10px;
+  height: 30px;
   h4, p { display: inline; }
 }
