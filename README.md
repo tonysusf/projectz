@@ -21,7 +21,7 @@ Our approach for satisfying their needs was to:
 Our team is comprised of:
 
 - [@WardenUnleashed](http://twitter.com/WardenUnleashed) - University of Washington Math student and Property Manager to Be.
-- [@IanSmith9876](https://github.com/iansmith9876) - SparkCRM employee and ruby developer
+- [@IanSmith9876](https://github.com/iansmith9876) - Spark CRM employee and ruby developer
 - [@Brad](http://ca.linkedin.com/pub/brad-katronis/10/979/b47) - Property and Project Manager
 - [@makefire](https://github.com/makefire) - Amazon employee and ruby developer
 - [@Chowicus](http://github.com/chowicus) - Alex Chow is a student at the University of Washington trying to gain work experience in the field.
@@ -37,9 +37,14 @@ We made use of:
 
 ## Contributing
 
-In order to build and run our app:
+In order to contribute to our app:
 
-1. [Clone the code](https://github.com/makefire/projectz) and run in own Ruby on Rails environment.
-2. Profit
+1. Fork repository
+2. Make changes
+3. Submit Pull Request on Github
+
+Please use Github's issue tracker to submit any problems or feature requests.
+
+The app can be viewed at https://tranquil-ocean-4871.herokuapp.com/
 
 Our code is licensed under the [MIT License](LICENSE.md). Pull requests will be accepted to this repo, pending review and approval.
