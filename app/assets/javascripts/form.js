@@ -1,5 +1,15 @@
 $(document).ready(function() {
 
+  Number.prototype.number_with_delimiter = function(delimiter) {
+    var number = this + '', delimiter = delimiter || ',';
+    var split = number.split('.');
+    split[0] = split[0].replace(
+        /(\d)(?=(\d\d\d)+(?!\d))/g,
+        '$1' + delimiter
+    );
+    return split.join('.');
+  };
+
   $('.search').on('click', function() {
     $.post( '/grant_gateway/search', $('#search-form').serialize(), function(data) {
       var total_value = 0;
@@ -10,10 +20,10 @@ $(document).ready(function() {
           total_value += parseInt(data[i].amount)
         };
       };
-      console.log(total_value)
+
       if (total_value > 0) {
         $('.total-value').empty()
-        $('.total-value').append("$" + total_value)
+        $('.total-value').append("$" + total_value.number_with_delimiter())
       };
       if (data.length == 0) {
         $('.results').append("<p class='no-results'>No Results Found</p>")
