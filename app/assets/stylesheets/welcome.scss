@@ -173,5 +173,9 @@ body .form-container{
   margin: 0;
   margin-top: 10px;
   height: 30px;
-  h4, p { display: inline; }
+  h4 { display: inline; }
+  p {
+    display: inline;
+    font-size: 1.1em;
+  }
 }
