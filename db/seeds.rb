@@ -8,17 +8,17 @@
 
 ### Grants ####
 Grant.all.each{|m| m.destroy}
-Grant.create(id: 1, name: "Dream Maker Grant", description: "2 to 1 matching for a maximum of $5000, buyer must contribute at least $500")
-Grant.create(id: 2, name: "Good Neighbor Next Door", description: "Up to 50% of the value of the home")
-Grant.create(id: 3, name: "HomeChoice", description: "$15,000 grant towards downpayment")
-Grant.create(id: 4, name: "House Key Plus Downpayment Assistance", description: "$5,000 towards down payment or closing cost")
-Grant.create(id: 5, name: "House Key Rural", description: "$10,000 or 6% of purchase price down payment assistance, which ever is greater")
-Grant.create(id: 6, name: "House Key Schools", description: "Up to $10,000, repayable at 3%  simple interest after 10 years")
-Grant.create(id: 7, name: "House Key", description: "Up to $45,000 for downpayment at 3% loan for 30 years")
-Grant.create(id: 8, name: "Rural Housing Guaranteed Loan", description: "Up to 90% loan insurance program to qualifed lenders")
-Grant.create(id: 9, name: "HUD's FHA Loan", description: "Insured Loan for under qualifed individuals")
-Grant.create(id: 10, name: "VA Home Loans", description: "240,000 for purchase or construction with no down payment and minimal interest")
-
+Grant.create(id: 1, name: "Dream Maker Grant", description: "2 to 1 matching for a maximum of $5000, buyer must contribute at least $500", link: "http://www.pentagonfoundation.org/site/PageServer?pagename=dream_index")
+Grant.create(id: 2, name: "Good Neighbor Next Door", description: "Up to 50% of the value of the home", link: "http://portal.hud.gov/hudportal/HUD?src=/program_offices/housing/sfh/reo/goodn/gnndabot")
+Grant.create(id: 3, name: "HomeChoice", description: "$15,000 grant towards downpayment", link: "http://www.wshfc.org/buyers/homechoice.htm")
+Grant.create(id: 4, name: "House Key Plus Downpayment Assistance", description: "$5,000 towards down payment or closing cost", link: "")
+Grant.create(id: 5, name: "House Key Rural", description: "$10,000 or 6% of purchase price down payment assistance, which ever is greater", link: "")
+Grant.create(id: 6, name: "House Key Schools", description: "Up to $10,000, repayable at 3%  simple interest after 10 years", link: "")
+Grant.create(id: 7, name: "House Key", description: "Up to $45,000 for downpayment at 3% loan for 30 years", link: "")
+Grant.create(id: 8, name: "Rural Housing Guaranteed Loan", description: "Up to 90% loan insurance program to qualifed lenders", link: "http://www.rd.usda.gov/programs-services/single-family-housing-guaranteed-loan-program")
+Grant.create(id: 9, name: "HUD's FHA Loan", description: "Insured Loan for under qualifed individuals", link: "http://portal.hud.gov/hudportal/HUD?src=/buying/loans")
+Grant.create(id: 10, name: "VA Home Loans", description: "240,000 for purchase or construction with no down payment and minimal interest", link: "http://www.benefits.va.gov/homeloans/")
+Grant.create(id: 11, name: "American Dream Down Payment Assistance", description: "", link: "http://www.americandreamdownpaymentassistance.com/")
 ### Questions ###
 Question.all.each{|m| m.destroy}
 Question.create(id: 1, text: "US Citizen", input_type: 0)
