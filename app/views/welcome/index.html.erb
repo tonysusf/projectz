@@ -1,31 +1,30 @@
-<div class="form-group col-xs-12 col-sm-6">
-  <h3>Fill Out Your Information</h3>
+<div class="form-container col-xs-12 col-sm-4">
+  <h3>Questions</h3>
   <form id="search-form">
     <% @questions.each_with_index do |question, index| %>
       <label for="sel1"><%= question.text %>:</label>
       <% if question.input_type > 0 %>
-        <input class="form-control"></input>
+        <input></input>
       <% else %>
-        <select class="form-control">
-          <option default>--Select--</option>
-          <% question.question_options.each do |option| %>
-            <option><%= option.text %></option>
-          <% end %>
-        </select>
+        <div class="dropdown-wrapper">
+          <select>
+            <option default>--Select--</option>
+            <% question.question_options.each do |option| %>
+              <option><%= option.text %></option>
+            <% end %>
+          </select>
+        </div>
       <% end %>
     <% end %>
 
     <button type="button" class="search btn btn-success">Search</button>
   </form>
 </div>
-<div class="results col-xs-12 col-sm-6">
-  <h3>Grants Available To You</h3>
+<h3 class="result-title col-sm-8">Housing Grants Available To You</h3>
+<div class="results col-xs-12 col-sm-8">
 
 </div>
-<div class="result-total">
+<div class="result-total col-sm-8">
   <h4>Total Savings:</h4>
   <p>$50,000</p>
-</div>
-<div class="map-container col-xs-12">
-
 </div>
