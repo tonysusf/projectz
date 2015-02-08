@@ -1,4 +1,4 @@
-# Hack Housing: Project Zed
+# Hack Housing: Project Z
 
 Information about grants and loan programs that are currently being active and accepting applicants is to some extent an arcane subject. Trying to research these programs online can be difficult and hard to find with many links being outdated or no-longer active. In order to assist first-time home buyers, low-mid income families / individuals, and those of a protected classes we have synthesized information about these programs into an easily searchable database based on demographic parameters and other information that would allow people to qualify for these programs.
 ![Isn't our app beautiful?!](screenshot.jpg)
