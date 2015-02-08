@@ -24,6 +24,9 @@ $(document).ready(function() {
       if (total_value > 0) {
         $('.total-value').empty()
         $('.total-value').append("$" + total_value.number_with_delimiter())
+      } else {
+        $('.total-value').empty()
+        $('.total-value').append("_______________")
       };
       if (data.length == 0) {
         $('.results').append("<p class='no-results'>No Results Found</p>")
