@@ -53,6 +53,7 @@ QuestionOption.create(question_id: 8, text: "Yes")
 QuestionOption.create(question_id: 8, text: "No")
 
 ### Populate Grant Conditions from Speedsheet ###
+GrantCondition.all.each{|m| m.destroy}
 def get_question_option_Id(question_id, str)
   obj = QuestionOption.where(:question_id => question_id, :text => str).first
   raise "No '#{str}' for Question #{question_id}" unless obj

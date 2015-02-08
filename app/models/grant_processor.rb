@@ -30,7 +30,7 @@ class GrantProcessor
     if (question.input_type == Question::QUESTION_TYPE_DROPDOWN) 
       expected = GrantCondition.where(:grant_id => grant.id, :question_id => question.id).try(:first)
       if (expected)
-        result = false unless answer == expected.question_option_id
+        result = false unless answer.to_i == expected.question_option_id
       end
     elsif (question.input_type == Question::QUESTION_TYPE_TEXT_BOX) 
       
