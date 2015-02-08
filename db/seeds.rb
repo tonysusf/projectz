@@ -48,8 +48,60 @@ QuestionOption.create(question_id: 6, text: "Yes")
 QuestionOption.create(question_id: 6, text: "No")
 QuestionOption.create(question_id: 7, text: "Teacher")
 QuestionOption.create(question_id: 7, text: "Emergency Worker")
-QuestionOption.create(question_id: 7, text: "Active Military")
-QuestionOption.create(question_id: 8, text: "Aids/HIV")
-QuestionOption.create(question_id: 8, text: "Birth defect")
-QuestionOption.create(question_id: 8, text: "Disabled vetern")
+QuestionOption.create(question_id: 7, text: "Military")
+QuestionOption.create(question_id: 8, text: "Yes")
+QuestionOption.create(question_id: 8, text: "No")
 
+### Populate Grant Conditions from Speedsheet ###
+def get_question_option_Id(question_id, str)
+  obj = QuestionOption.where(:question_id => question_id, :text => str).first
+  raise "No '#{str}' for Question #{question_id}" unless obj
+  obj.id
+end
+def gc(grant_id, question_id, str)
+  question_option_id = get_question_option_Id(question_id, str)
+  GrantCondition.create(:grant_id => grant_id, 
+    :question_id => question_id, 
+    :question_option_id => question_option_id)
+end
+gc(1, 1, "Yes")
+gc(2, 1, "Yes")
+gc(3, 1, "Yes")
+gc(4, 1, "Yes")
+gc(5, 1, "Yes")
+gc(6, 1, "Yes")
+gc(7, 1, "Yes")
+gc(8, 1, "Yes")
+gc(9, 1, "Yes")
+gc(10, 1, "Yes")
+
+gc(5, 2, "Spokane")
+gc(8, 2, "Spokane")
+
+gc(1, 3, "Yes")
+gc(2, 3, "No")
+gc(3, 3, "No")
+gc(4, 3, "Yes")
+gc(5, 3, "Yes")
+gc(6, 3, "Yes")
+gc(7, 3, "Yes")
+gc(8, 3, "No")
+gc(9, 3, "No")
+gc(10, 3, "No")
+
+gc(1, 6, "Yes")
+gc(2, 6, "No")
+gc(3, 6, "No")
+gc(4, 6, "No")
+gc(5, 6, "No")
+gc(6, 6, "No")
+gc(7, 6, "No")
+gc(8, 6, "No")
+gc(9, 6, "No")
+gc(10, 6, "Yes")
+
+gc(1, 7, "Military")
+gc(2, 7, "Emergency Worker")
+gc(6, 7, "Teacher")
+
+gc(3, 8, "Yes")
