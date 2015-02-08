@@ -26,9 +26,9 @@ Question.create(id: 2, text: "City", input_type: 0)
 Question.create(id: 3, text: "First Home", input_type: 0)
 Question.create(id: 4, text: "Household Income", input_type: 1)
 Question.create(id: 5, text: "Family Size", input_type: 0)
-Question.create(id: 6, text: "Vetren Status", input_type: 0)
+Question.create(id: 6, text: "Veteran Status", input_type: 0)
 Question.create(id: 7, text: "Profession", input_type: 0)
-Question.create(id: 8, text: "Diability Status", input_type: 0)
+Question.create(id: 8, text: "Disability Status", input_type: 0)
 
 ### Question Options ###
 QuestionOption.all.each{|m| m.destroy}
@@ -61,8 +61,8 @@ def get_question_option_Id(question_id, str)
 end
 def gc(grant_id, question_id, str)
   question_option_id = get_question_option_Id(question_id, str)
-  GrantCondition.create(:grant_id => grant_id, 
-    :question_id => question_id, 
+  GrantCondition.create(:grant_id => grant_id,
+    :question_id => question_id,
     :question_option_id => question_option_id)
 end
 gc(1, 1, "Yes")
