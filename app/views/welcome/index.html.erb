@@ -4,13 +4,13 @@
     <% @questions.each_with_index do |question, index| %>
       <label for="sel1"><%= question.text %>:</label>
       <% if question.input_type > 0 %>
-        <input></input>
+        <input name="question-<%= question.id %>"></input>
       <% else %>
         <div class="dropdown-wrapper">
-          <select>
+          <select name="question-<%= question.id %>">
             <option default>--Select--</option>
             <% question.question_options.each do |option| %>
-              <option><%= option.text %></option>
+              <option value="<%= option.id %>"><%= option.text %></option>
             <% end %>
           </select>
         </div>
