@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Projectz</title>
-  <meta content="initial-scale=1, width=device-width" name="viewport"/>
-  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500,100,300' rel='stylesheet' type='text/css'>
-  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-  <link href="https://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet">
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <div class="navbar">
-    <ul class="nav navbar-nav">
-      <li class="active title">
-        <h4><a href="#">Project Z</a></h4>
-      </li>
-    </ul>
-  </div>
+  <head>
+    <title>Projectz</title>
+    <meta content="initial-scale=1, width=device-width" name="viewport"/>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500,100,300' rel='stylesheet' type='text/css'>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet">
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
 
-<%= yield %>
+    <div class="navbar">
+      <ul class="nav navbar-nav">
+        <li class="active title">
+          <h4><a href="#">Project Z</a></h4>
+        </li>
+      </ul>
+    </div>
 
-</body>
+  <%= yield %>
+
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  </body>
 </html>
