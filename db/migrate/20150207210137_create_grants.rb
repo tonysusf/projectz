@@ -4,6 +4,7 @@ class CreateGrants < ActiveRecord::Migration
       t.string         :name
       t.text           :description
       t.string         :link
+      t.decimal        :amount
 
       t.timestamps null: false
     end

@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20150208012306) do
     t.string   "name"
     t.text     "description"
     t.string   "link"
+    t.decimal  "amount"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
