@@ -29,6 +29,7 @@ $(document).ready(function() {
         $('.results').append("<p class='no-results'>No Results Found</p>")
       };
     });
+    $('html,body').animate({scrollTop: $("#result-anchor").offset().top},'fast');
   });
 
 });
